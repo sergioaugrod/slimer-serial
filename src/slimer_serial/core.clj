@@ -4,12 +4,12 @@
             [serial.core :as serial])
   (:import [java.io BufferedReader InputStreamReader InputStream]))
 
-(def config (aero/read-config "resources/config.edn"))
+(def ^:private config (aero/read-config "resources/config.edn"))
 
 (defrecord Connection [port baud-rate])
-(def connection (map->Connection (:connection config)))
+(def ^:private connection (map->Connection (:connection config)))
 
-(def serial-port (serial/open (:port connection) :baud-rate (:baud-rate connection)))
+(def ^:private serial-port (serial/open (:port connection) :baud-rate (:baud-rate connection)))
 
 (defn- listen-readline
   [port handler]
