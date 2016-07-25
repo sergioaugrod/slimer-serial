@@ -1,1 +1,2 @@
-{ :connection { :port "/dev/tty.usbmodem1421" :baud-rate 9600 } }
+{:serial {:port "/dev/tty.usbmodem1421" :baud-rate 9600}
+ :mqtt {:host "tcp://127.0.0.1:1883"}}
