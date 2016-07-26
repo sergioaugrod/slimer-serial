@@ -14,3 +14,7 @@
 (defn gets
   [handler]
   (serial/listen serial-port (listener handler)))
+
+(defn write
+  [message]
+  (serial/write serial-port (.getBytes message)))

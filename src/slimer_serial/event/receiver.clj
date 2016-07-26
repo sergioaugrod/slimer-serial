@@ -6,8 +6,9 @@
 (defn- log-message
   [message]
   (println
-    (str "Topic: " (message "topic"))
-    (str "Value: " (message "value"))))
+    (str "[RECEIVER]:")
+    (str "TOPIC: " (message "topic"))
+    (str "VALUE: " (message "value"))))
 
 (defn- publish
   [message]

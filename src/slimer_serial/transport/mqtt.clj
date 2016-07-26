@@ -10,5 +10,5 @@
   (mqtt/publish conn topic (str value)))
 
 (defn subscribe
-  [topics handler]
-  (mqtt/subscribe conn topics handler))
+  [topics qos handler]
+  (mqtt/subscribe conn {topics qos} handler))
