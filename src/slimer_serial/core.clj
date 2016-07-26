@@ -6,5 +6,5 @@
 
 (defn -main
   [& args]
-  ;;(thread (receiver/execute))
+  (thread (receiver/execute))
   (thread (sender/execute)))
