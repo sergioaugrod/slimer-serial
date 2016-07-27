@@ -7,19 +7,17 @@
   [message]
   (println
     (str "[SENDER]:")
-    (str "TOPIC: " (message "topic"))
-    (str "VALUE: " (message "value"))))
+    (str "TOPIC: " (message :topic))
+    (str "VALUE: " (message :value))))
 
 (defn- parse
-  [topic value]
-  (let [message {:topic topic :value (String. value "UTF-8")}]
-    json/write-str message))
+  [message]
+  (json/write-str message))
 
 (defn- send-to-serial
   [^String topic _ ^bytes value]
-  (let [message (parse topic value)]
-    (println message)
-    (serial/write message)
+  (let [message {:topic topic :value (String. value "UTF-8")}]
+    (serial/write (parse message))
     (log-message message)))
 
 (defn- subscribe-queues
