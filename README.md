@@ -1,36 +1,36 @@
-# slimer-serial
+# Slimer Serial
 
-FIXME: description
+Enables communication between an Arduino and MQTT.
+
+## Features
+
+* Write/Get from arduino via Serial;
+* Publish/Subscribe MQTT.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+```console
+$ git clone https://www.github.com/sergioaugrod/slimer-serial
+$ cd slimer-serial
+$ lein deps
+```
+
+Sets your serial and mqtt configurations in `resources/config.edn`.
 
 ## Usage
 
-FIXME: explanation
+```console
+$ lein run
+```
 
-    $ java -jar slimer-serial-0.1.0-standalone.jar [args]
+## Contributing
 
-## Options
+1. Clone it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
-FIXME: listing of options this app accepts.
+## Maintainers
 
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+* [sergioaugrod](https://github.com/sergioaugrod/)
